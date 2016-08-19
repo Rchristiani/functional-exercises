@@ -50,5 +50,47 @@ $(function() {
 				});
 
 			console.log(mixedDogs);
+
+			//Exercise #4
+			//Using the Reduce method to group animal type in an array of objects
+			/*
+			{
+				'Dog': [],
+				...
+			}
+			*/
+			const types = pets
+				.reduce((prev,curr) => {
+					const key = curr.animal.$t;
+					if(prev[key] === undefined) {
+						prev[key] = [];
+					}
+					prev[key].push(curr)
+					return prev;
+				}, {});
+
+			console.log(types)
+
+			//Exercise #5
+			//Collect and count the number of different sexes
+			/*
+			{
+				Dog: 25,
+				Rabbit: 100,
+				...
+			}
+			*/
+			const sexCount = pets
+				.reduce((prev,curr) => {
+					const key = curr.sex.$t;
+					if(prev[key] === undefined) {
+						prev[key] = 0;
+					}
+					prev[key]++;
+					return prev
+				},{});
+
+			console.log(sexCount);
+
 		});
 });

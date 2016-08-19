@@ -25,5 +25,24 @@ $(function() {
 			}
 			*/
 
+			//Exercise #4
+			//Using the Reduce method to group animal type in an array of objects
+			/*
+			{
+				'Dog': [],
+				...
+			}
+			*/
+
+			//Exercise #5
+			//Collect and count the number of different sexes
+			/*
+			{
+				Dog: 25,
+				Rabbit: 100,
+				...
+			}
+			*/
+
 		});
 });
